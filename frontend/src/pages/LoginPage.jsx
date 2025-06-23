@@ -1,8 +1,14 @@
+import { useNavigate } from "react-router-dom";
+
 export default function LoginPage() {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/authP");
+  };
   const styles = {
     mainDiv: {
       display: "flex",
-      gap: "32rem",
+      gap: "30rem",
       padding: "0.5rem",
     },
     textLeft: {
@@ -26,26 +32,35 @@ export default function LoginPage() {
     },
     button: {
       display: "flex",
-      gap: "3rem",
-      // padding: "0.75rem 1.5rem",
+      alignItems: "center",
+      gap: "1rem",
       borderRadius: "8px",
-      fontSize: "1.5rem",
+      fontSize: "1.2rem",
       cursor: "pointer",
       width: "25rem",
-      height: "5rem",
-      // backgroundColor: "#007BFF",
+      height: "4rem",
       border: "0.1rem solid #898888",
       backgroundColor: "#fff",
       color: "#626262",
-      // color: "#fff",
-      // transition: "background-color 0.3s ease",
+      justifyContent: "center",
     },
     para: {
-      marginTop: "16rem",
+      marginTop: "19.9rem",
       color: "#626262",
     },
     txt: {
       color: "#626262",
+    },
+    input: {
+      width: "25rem",
+      height: "4rem",
+      padding: "0 1rem",
+      fontSize: "1.2rem",
+      border: "none",
+      borderBottom: "1px solid #898888",
+      outline: "none",
+      color: "#626262",
+      backgroundColor: "#fff",
     },
   };
 
@@ -58,27 +73,47 @@ export default function LoginPage() {
           </div>
           <div className="center-text" style={styles.centerText}>
             <h1 style={styles.txt}>Welcome 👋</h1>
+
             <div>
               <button style={styles.button}>
-                <img src="../src/assets/google_icon.png" alt="company logo" />
-                <p>Continue with Google</p>
+                <img
+                  src="../src/assets/google_icon.png"
+                  alt="Google icon"
+                  width="24"
+                  height="24"
+                />
+                <span>Continue with Google</span>
               </button>
             </div>
+
             <div>
-              <button style={styles.button}>
-                <img src="../src/assets/mail_icon.png" alt="company logo" />
-                <p>Continue with Email</p>
+              <button style={styles.button} onClick={handleClick}>
+                <img
+                  src="../src/assets/mail_icon.png"
+                  alt="Email icon"
+                  width="24"
+                  height="24"
+                />
+                <span>Continue with Email</span>
               </button>
             </div>
+
             <h2 style={styles.txt}>OR</h2>
+
             <div>
-              <button style={styles.button}>Continue with Mobile Number</button>
+              <input
+                type="tel"
+                placeholder="Continue with mobile number"
+                style={styles.input}
+              />
             </div>
+
             <p style={styles.para}>
               I agree to the Terms & Conditions & Privacy Policy
             </p>
           </div>
         </div>
+
         <div className="image-right" style={styles.imageRight}>
           <div>
             <img src="../src/assets/theatre.png" alt="theatre" />

@@ -55,7 +55,7 @@ export default function HeadProfile() {
   return (
     <div style={styles.header}>
       <div style={styles.leftSection}>
-        <a href="http://localhost:5173/auth">
+        <a href="http://localhost:5173/home">
           <img
             style={styles.logo}
             src="../src/assets/logo.png"

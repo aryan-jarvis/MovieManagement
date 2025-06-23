@@ -34,22 +34,23 @@ export default function ListShow() {
   };
 
   return (
-    <div style={{ padding: "2rem" }}>
+    <div>
       <HeadProfile />
+      <div style={{ paddingLeft: "2rem", paddingRight: "2rem" }}>
+        <div style={breadcrumbStyle}>
+          <a href="/home" style={{ textDecoration: "none", color: "#FF5295" }}>
+            <p>Home</p>
+          </a>
+          <p>/</p>
+          <a href="/listS" style={{ textDecoration: "none", color: "#FF5295" }}>
+            <p>Showtime Scheduling</p>
+          </a>
+        </div>
 
-      <div style={breadcrumbStyle}>
-        <a href="/home" style={{ textDecoration: "none", color: "#FF5295" }}>
-          <p>Home</p>
-        </a>
-        <p>/</p>
-        <a href="/listS" style={{ textDecoration: "none", color: "#FF5295" }}>
-          <p>Showtime Scheduling</p>
-        </a>
-      </div>
-
-      <div style={headerContainerStyle}>
-        <h1 style={titleStyle}>Scheduling Showtimes</h1>
-        <button style={buttonStyle}>+ Add New Showtime</button>
+        <div style={headerContainerStyle}>
+          <h1 style={titleStyle}>Scheduling Showtimes</h1>
+          <button style={buttonStyle}>+ Add New Showtime</button>
+        </div>
       </div>
     </div>
   );

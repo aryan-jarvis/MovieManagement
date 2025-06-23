@@ -34,22 +34,23 @@ export default function ListTheatre() {
   };
 
   return (
-    <div style={{ padding: "2rem" }}>
+    <div>
       <HeadProfile />
+      <div style={{ paddingLeft: "2rem", paddingRight: "2rem" }}>
+        <div style={breadcrumbStyle}>
+          <a href="/home" style={{ textDecoration: "none", color: "#FF5295" }}>
+            <p>Home</p>
+          </a>
+          <p>/</p>
+          <a href="/listT" style={{ textDecoration: "none", color: "#FF5295" }}>
+            <p>Theatre Management</p>
+          </a>
+        </div>
 
-      <div style={breadcrumbStyle}>
-        <a href="/home" style={{ textDecoration: "none", color: "#FF5295" }}>
-          <p>Home</p>
-        </a>
-        <p>/</p>
-        <a href="/listT" style={{ textDecoration: "none", color: "#FF5295" }}>
-          <p>Theatre Management</p>
-        </a>
-      </div>
-
-      <div style={headerContainerStyle}>
-        <h1 style={titleStyle}>Manage Theatres</h1>
-        <button style={buttonStyle}>+ Add New Theatre</button>
+        <div style={headerContainerStyle}>
+          <h1 style={titleStyle}>Manage Theatres</h1>
+          <button style={buttonStyle}>+ Add New Theatre</button>
+        </div>
       </div>
     </div>
   );

@@ -7,17 +7,19 @@ import HomePage from "./pages/HomePage";
 import ListMovie from "./pages/ListMovie";
 import ListShow from "./pages/ListShow";
 import ListTheatre from "./pages/ListTheatre";
+import AuthPopUp from "./pages/AuthPopUp";
 
 export default function App() {
   return (
     <div>
       <Routes>
-        <Route path="*" element={<Navigate to="/auth" replace />} />
+        <Route path="*" element={<Navigate to="/home" replace />} />
         <Route path="/auth" element={<LoginPage />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/listM" element={<ListMovie />} />
         <Route path="/listS" element={<ListShow />} />
         <Route path="/listT" element={<ListTheatre />} />
+        <Route path="/authP" element={<AuthPopUp />} />
       </Routes>
     </div>
   );
